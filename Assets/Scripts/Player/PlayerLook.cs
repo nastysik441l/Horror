@@ -15,7 +15,6 @@ public class PlayerLook : MonoBehaviour
 
     
   private  void Update()
-    {
-        Look();
-    }
+    =>  Look();
+    
 }
