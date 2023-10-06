@@ -9,9 +9,9 @@ public abstract class Door : MonoBehaviour
 
   [SerializeField] protected TMP_Text Message;
 
-     private void OnTriggerExit(Collider collider)=> Message.gameObject.SetActive(false);
 
- private void OnTriggerEnter(Collider collider)
+
+ private void OnTriggerStay(Collider collider)
     =>Open();
     
 

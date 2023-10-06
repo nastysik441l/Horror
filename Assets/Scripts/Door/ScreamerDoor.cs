@@ -1,5 +1,7 @@
 
 using UnityEngine;
+using DG.Tweening;
+
 
 public class ScreamerDoor : Door
 {
@@ -7,7 +9,14 @@ public class ScreamerDoor : Door
     {
         print("Screamer");
         Message.gameObject.SetActive(true);
-        
+        if(Input.GetKeyDown(KeyCode.E))
+                    transform.DORotate(new Vector3(0f,135f,0f),2);
             }
    
+        private void OnTriggerExit(Collider collider)
+        
+        {  
+            Message.gameObject.SetActive(false);
+              transform.DORotate(Vector3.zero,1.5f);
+        }
 }
