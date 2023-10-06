@@ -9,7 +9,7 @@ public abstract class Door : MonoBehaviour
 
   [SerializeField] protected TMP_Text Message;
 
-
+[SerializeField] protected Transform DoorModel;
 
  private void OnTriggerStay(Collider collider)
     =>Open();
