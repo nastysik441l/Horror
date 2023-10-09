@@ -7,6 +7,7 @@ public class NormalDoor : Door
     protected override void Open()
     {
         print("Normal");
+        Sound.Play();
    Message.gameObject.SetActive(true);
         if(Input.GetKeyDown(KeyCode.E))
   DoorModel.transform.DORotate(new Vector3(0f,135f,0f),2);
