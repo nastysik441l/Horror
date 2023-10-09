@@ -7,10 +7,15 @@ public class NormalDoor : Door
     protected override void Open()
     {
         print("Normal");
-        Sound.Play();
+       
    Message.gameObject.SetActive(true);
         if(Input.GetKeyDown(KeyCode.E))
-  DoorModel.transform.DORotate(new Vector3(0f,135f,0f),2);
+        {
+           
+           DoorModel.transform.DORotate(new Vector3(0f,135f,0f),2); 
+            DoorOpenSound.Play();
+        }
+  
   }
 
         private void OnTriggerExit(Collider collider)
@@ -18,5 +23,6 @@ public class NormalDoor : Door
         {  
             Message.gameObject.SetActive(false);
                DoorModel.transform.DORotate(Vector3.zero,1.5f);
+                DoorOpenSound.Play();
         }
 }
